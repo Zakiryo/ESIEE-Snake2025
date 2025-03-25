@@ -4,7 +4,7 @@
 
 L'objectif de ce TP est l'initiation à la bibliothèque "lMLV" permettant de manipuler des interfaces graphiques et des formes.
 
-Le travail réalisé se trouve dans le fichier [main.c](https://git.esiee.fr/rudnyy/tp1/-/blob/main/main.c) et les réponses aux questions posées dans le sujets se trouvent ci-dessous.
+Le travail réalisé se trouve dans le fichier [main.c](https://git.esiee.fr/rudnyy/snake2025/-/blob/main/tp1/login_tp1/main.c) et les réponses aux questions posées dans le sujets se trouvent ci-dessous.
 
 ## Essaie de compilation de `01_hello_world.c`
 
@@ -21,4 +21,4 @@ Avec notre fichier objet, on compile en ajoutant le paramètre `-lMLV` pour dire
 
 ## Création du makefile
 
-J'ai donc créé un makefile permettant d'exécuter toutes les commandes précédentes automatiquement à l'aide seulement de la commande "make". Le code de celui-ci se trouve dans le fichier [makefile](https://git.esiee.fr/rudnyy/tp1/-/blob/main/makefile) et prend en compte les instructions de compilation de l'ESIEE avec les paramètres `-Wall -ansi`.
+J'ai donc créé un makefile permettant d'exécuter toutes les commandes précédentes automatiquement à l'aide seulement de la commande "make". Le code de celui-ci se trouve dans le fichier [makefile](https://git.esiee.fr/rudnyy/snake2025/-/blob/main/tp1/login_tp1/makefile) et prend en compte les instructions de compilation de l'ESIEE avec les paramètres `-Wall -ansi`.
