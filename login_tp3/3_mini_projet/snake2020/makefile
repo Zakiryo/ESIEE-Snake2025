@@ -1,16 +1,19 @@
 CC = gcc
 CFLAGS = -Wall -ansi
 
-all: snake
+all: snake2025
 
-snake: game.o grid.o
-	$(CC) $(CFLAGS) -o snake game.o grid.o -lMLV
+snake2025: game.o grid.o snake.o
+	$(CC) $(CFLAGS) -o snake2025 game.o grid.o snake.o -lMLV
 
-game: game.c grid.h
-	$(CC) $(CFLAGS) -c game.c -lMLV
+game.o: game.c grid.h
+	$(CC) $(CFLAGS) -c game.c
 
-grid: grid.c grid.h
-	$(CC) $(CFLAGS) -c grid.c -lMLV
+grid.o: grid.c grid.h snake.h
+	$(CC) $(CFLAGS) -c grid.c
+
+snake.o: snake.c snake.h
+	$(CC) $(CFLAGS) -c snake.c
 
 clean:
-	rm -f *.o
+	rm -f *.o snake2025

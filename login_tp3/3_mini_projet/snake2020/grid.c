@@ -19,7 +19,7 @@ void debug(char matrix[NBL][NBC + 1])
 int compute_size(int w, int h)
 {
     int aw = w / NBC;
-    int ah = w / NBL;
+    int ah = h / NBL;
     return aw < ah ? aw : ah;
 }
 
@@ -31,7 +31,7 @@ void draw_grid(char grid[NBL][NBC + 1])
     int i, j;
     for (i = 0; i < NBL; i++)
     {
-        for (j = 0; j < NBC; j++)
+        for (j = 0; j < NBC+1; j++)
         {
             char square = grid[i][j];
             MLV_Color color;
@@ -46,9 +46,28 @@ void draw_grid(char grid[NBL][NBC + 1])
             case FRUIT:
                 color = MLV_COLOR_RED;
                 break;
+            case SNAKE:
+                color = MLV_COLOR_GREEN;
+                break;
             }
             MLV_draw_filled_rectangle(j * a, i * a, a, a, color);
         }
-        }
+    }
     MLV_actualise_window();
+}
+
+void place_snake(char grid[NBL][NBC + 1], Snake s)
+{
+    int i;
+    for (i = 0; i < SNAKE_SIZE; ++i)
+    {
+        grid[s.pos[i].x][s.pos[i].y] = SNAKE;
+    }
+}
+
+void move_snake(Snake s, char grid[NBL][NBC + 1])
+{
+    grid[s.pos[SNAKE_SIZE - 1].x][s.pos[SNAKE_SIZE - 1].y] = EMPTY;
+    crawl(s);
+    grid[s.pos[0].x][s.pos[0].y] = SNAKE;
 }
