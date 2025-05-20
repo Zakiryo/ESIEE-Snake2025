@@ -31,7 +31,7 @@ void draw_grid(char grid[NBL][NBC + 1])
     int i, j;
     for (i = 0; i < NBL; i++)
     {
-        for (j = 0; j < NBC+1; j++)
+        for (j = 0; j < NBC + 1; j++)
         {
             char square = grid[i][j];
             MLV_Color color;
@@ -65,9 +65,9 @@ void place_snake(char grid[NBL][NBC + 1], Snake s)
     }
 }
 
-void move_snake(Snake s, char grid[NBL][NBC + 1])
+void move_snake(Snake *s, char grid[NBL][NBC + 1])
 {
-    grid[s.pos[SNAKE_SIZE - 1].x][s.pos[SNAKE_SIZE - 1].y] = EMPTY;
+    grid[s->pos[SNAKE_SIZE - 1].x][s->pos[SNAKE_SIZE - 1].y] = EMPTY;
     crawl(s);
-    grid[s.pos[0].x][s.pos[0].y] = SNAKE;
+    grid[s->pos[0].x][s->pos[0].y] = SNAKE;
 }

@@ -22,4 +22,4 @@ typedef struct struct_snake
     Direction dir;
 } Snake;
 
-void crawl(Snake s);
+void crawl(Snake *s);

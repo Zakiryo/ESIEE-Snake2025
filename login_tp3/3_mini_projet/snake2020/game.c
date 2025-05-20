@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
         MLV_actualise_window();
         touche = MLV_KEYBOARD_NONE;
         MLV_delay_according_to_frame_rate();
-        move_snake(serpent, grid);
+        move_snake(&serpent, grid);
     }
 
     MLV_free_window();
