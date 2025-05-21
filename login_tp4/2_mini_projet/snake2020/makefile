@@ -16,4 +16,4 @@ snake.o: snake.c snake.h
 	$(CC) $(CFLAGS) -c snake.c
 
 clean:
-	rm -f *.o snake2025
+	rm -f *.o

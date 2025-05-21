@@ -2,13 +2,13 @@
 
 #define NBL 22
 #define NBC 36
+#define DIFFICULTY 4
 
-typedef enum element
-{
-    WALL = 'w',
-    EMPTY = ' ',
-    FRUIT = 'f',
-    SNAKE = 's',
+typedef enum element {
+  WALL = 'w',
+  EMPTY = ' ',
+  FRUIT = 'f',
+  SNAKE = 's',
 } Element;
 
 void debug(char matrix[NBL][NBC + 1]);
