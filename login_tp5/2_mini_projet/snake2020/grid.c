@@ -69,7 +69,7 @@ void place_snake(Grid *grid, Snake s)
 Element move_snake(Snake *s, Grid *grid)
 {
     grid->grid[s->pos[SNAKE_SIZE - 1].x][s->pos[SNAKE_SIZE - 1].y] = EMPTY;
-    crawl(s);
+    crawl(s, grid->nbl, grid->nbc);
     Element previous_head = grid->grid[s->pos[0].x][s->pos[0].y];
     grid->grid[s->pos[0].x][s->pos[0].y] = SNAKE;
     return previous_head;

@@ -155,7 +155,7 @@ int main(int argc, char *argv[])
     int width = 1280, height = 720;
 
     MLV_create_window("SNAKE", "3R-IN1B", width, height);
-    MLV_change_frame_rate(60);
+    MLV_change_frame_rate(24);
     Snake serpent = {.pos = {{1, 3}, {1, 2}, {1, 1}, {1, 0}}};
     serpent.dir = RIGHT;
     place_snake(grid, serpent);

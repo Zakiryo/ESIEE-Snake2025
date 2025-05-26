@@ -1,6 +1,6 @@
 #include "snake.h"
 
-#define DIFFICULTY 4
+#define DIFFICULTY 2
 
 typedef enum element
 {
